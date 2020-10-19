@@ -1,0 +1,343 @@
+:root {
+  --major-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --major-white-color: #ffffff;
+  --minor-white-color: rgba(255, 255, 255, 0.6);
+  --minor-bg-color: #2f303a;
+  --sub-minor-bg-color: #f5f4fa;
+  --icon-main: #afb1b8;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--major-text-color);
+  font-family: "Roboto", sans-serif;
+}
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-text-color);
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+button {
+  border: 0;
+}
+
+ul {
+  padding-inline-start: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  padding-inline-start: 0px;
+  list-style-type: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 0 auto;
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Header */
+.header {
+  margin-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ececec;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: var(--accent-color);
+}
+.logo-accent {
+  color: var(--title-text-color);
+}
+.nav {
+  margin-left: 93px;
+}
+.nav-list {
+  display: flex;
+}
+.nav-item {
+}
+.nav-list .nav-item + .nav-item {
+  margin-left: 50px;
+}
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  color: var(--title-text-color);
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.nav-link.current {
+  color: var(--accent-color);
+}
+
+.nav-link.current::after {
+  display: block;
+  content: "";
+  margin-top: 28px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  position: absolute;
+}
+.nav-link.current:hover::after {
+  width: 100%;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+  color: var(--major-text-color);
+}
+.contacts {
+  display: flex;
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  columns: var(--major-text-color);
+}
+.contacts .contacts-item + .contacts-item {
+  margin-left: 50px;
+}
+.contacts-icon,
+.contacts-icon {
+  fill: var(--major-text-color);
+}
+.mail-icon {
+  width: 20px;
+  height: 17px;
+}
+.tel-icon {
+  width: 15px;
+  height: 17px;
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.contacts-link:hover .contacts-icon,
+.contacts-link:focus .contacts-icon {
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  fill: var(--accent-color);
+}
+
+.contacts-text {
+  margin-left: 10px;
+}
+/* Header */
+/* Footer */
+.footer {
+  background-color: var(--minor-bg-color);
+}
+.wrapper {
+  display: flex;
+}
+.footer-logo {
+  padding-top: 60px;
+  margin-bottom: 20px;
+}
+.footer-logo-accent {
+  color: var(--major-white-color);
+}
+
+.footer-address-text {
+  display: block;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--major-white-color);
+  margin-bottom: 9px;
+}
+.footer-contacts-mail {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.footer-mail-text,
+.footer-tel-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--minor-white-color);
+}
+.join-us {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 72px;
+  margin-left: 72px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--major-white-color);
+}
+
+.footer-social-list {
+  display: inline-flex;
+  border-radius: 50%;
+  margin-left: 70px;
+  margin-bottom: 100px;
+}
+.footer-social-list .footer-social-item + .footer-social-item {
+  margin-left: 10px;
+}
+
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-social-icon {
+  fill: var(--major-white-color);
+}
+.footer-social-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-social-item:hover {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.footer-social-item:hover .social-icon {
+  fill: var(--major-white-color);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.subscribe {
+  margin-left: 90px;
+  margin-top: 72px;
+}
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  color: var(--major-text-color);
+  background: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.subscribe-form {
+}
+.subscribe-label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--major-white-color);
+}
+.subscribe-btn {
+  display: inline-flex;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--major-white-color);
+  background: var(--accent-color);
+  background-position: 160px center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.subscribe-btn-text {
+  margin-left: 29px;
+  margin-right: 10px;
+}
+/* Footer */
+/* Social icons */
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.twitter-icon {
+  width: 20px;
+  height: 16px;
+}
+.facebook-icon {
+  width: 10px;
+  height: 20px;
+}
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
+}
+/* Social icons */
